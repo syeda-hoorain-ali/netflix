@@ -1,0 +1,680 @@
+@font-face {
+    font-family: "Segoe UI";
+    src: url("./Font/Segoe-UI.woff");
+}
+
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url("./Font/Segoe-UI-Bold.woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    color: #ffffff;
+    background: #000000;
+    overflow-x: hidden;
+}
+
+section {
+    margin-bottom: 64px;
+    padding: 0 148px;
+}
+
+section h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: "Segoe UI Bold";
+}
+
+
+
+/** ------------------ Header ------------------ **/
+
+header {
+    height: 700px;
+    width: 100%;
+    background-image: radial-gradient(circle, #0000004b, #000000ef),
+        url("Images/hero-section.jpg");
+    background-size: cover;
+    object-position: 50% 50%;
+    z-index: -999;
+}
+
+.navbar {
+    height: 86px;
+    padding: 0 148px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar .signin {
+    height: 32px;
+    width: 76px;
+    margin-left: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: #E50914;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: #C11119;
+        cursor: pointer;
+    }
+}
+
+.hero-section {
+    height: 311px;
+    margin: 140px 400px 17px 380px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-section h1 {
+    margin-bottom: 16px;
+    font-size: 56px;
+    font-weight: 900;
+}
+
+.hero-section p {
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero-section h3 {
+    /* margin-top: 20px; */
+    font-size: 16px;
+    font-weight: 400;
+}
+
+form {
+    height: 56px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+form input {
+    height: 56px;
+    width: 350px;
+    padding: 15px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+form label {
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    cursor: text;
+    transition: 0.25s all cubic-bezier(0.9, 0, 0.51, 1);
+}
+
+
+form input:focus~label,
+form input:valid~label {
+    font-size: 12px;
+    top: 6px;
+}
+
+form button {
+    height: 56px;
+    width: 205px;
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    background: rgb(229, 9, 20);
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #C11119;
+        cursor: pointer;
+    }
+}
+
+/** ------------------ Divider ------------------ **/
+
+.divider {
+    width: 100%;
+    height: 96px;
+    border: 4px solid transparent;
+    border-bottom: none;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: relative;
+    top: -70px;
+    z-index: 1;
+    background: linear-gradient(to right,
+            rgba(33, 13, 22, 1) 16%,
+            rgba(184, 40, 105, 1),
+            rgba(229, 9, 20, 1),
+            rgba(184, 40, 105, 1),
+            rgba(33, 13, 22, 1) 84%);
+    display: flex;
+    align-items: center;
+}
+
+.divider::after {
+    content: "";
+    width: 105%;
+    height: 90px;
+    margin-top: 3px;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: -2.5%;
+    background: radial-gradient(50% 500% at 50% -420%,
+            rgba(64, 97, 231, 0.4) 80%,
+            rgba(0, 0, 0, 0.1) 100%), black;
+}
+
+
+/** ------------------ Start Now ------------------ **/
+
+.start-now {
+    width: 1053px;
+    height: 135px;
+    margin: -66px auto 64px auto;
+    padding: 32px 48px;
+    border-radius: 16px;
+    background: linear-gradient(93deg, #43172b, #230a25);
+    transition: all 0.5s cubic-bezier(0.33, 0, 0, 1);
+    ;
+
+    &:hover {
+        scale: 1.03;
+    }
+}
+
+.start-now h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.start-now p {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/** ------------------ Trending Now ------------------ **/
+
+/* .trending-now {
+    padding: 0 148px;
+    margin-bottom: 64px;
+}
+
+.trending-now h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+} */
+
+.trending-now .options {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.options .custom-select {
+    width: 111px;
+    height: 40px;
+    position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    background: url('./Svg/dropdown.svg') no-repeat;
+    background-position: 90% center;
+}
+
+.options .custom-select select {
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    padding: 8px 12px;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    & option {
+        color: #000000;
+    }
+}
+
+
+.trending-now .films {
+    margin-top: 16px;
+    width: 1053px;
+    height: 268px;
+    color: #ffffff;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/*  */
+
+.trending-now .films button {
+    width: 24px;
+    height: 120px;
+    background: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+    z-index: 99;
+
+    &:hover {
+        background-color: #333333;
+    }
+}
+
+
+.carousel-container {
+    width: 1053px;
+    overflow: hidden;
+}
+
+.carousel {
+    width: auto;
+    height: 268px;
+    display: flex;
+    transition: transform 0.5s ease;
+    /* background-color: #43172b; */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 224px;
+    height: 268px;
+    padding: 8px 22px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        scale: 1.05;
+    }
+
+}
+
+.carousel-item .img {
+    width: 100%;
+    height: 100%;
+    background-image: url('./Images/pakistan/movies/5.webp');
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.carousel-item .number {
+    position: absolute;
+    top: 124px;
+    left: 0;
+    font-size: 100px;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 24px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 4px;
+    /* z-index: ; */
+
+    &::before {
+        content: '';
+        -webkit-text-fill-color: rgb(0, 0, 0);
+        -webkit-text-stroke-width: 0px;
+        position: absolute;
+    }
+}
+
+
+/** ------------------ Member Ship ------------------ **/
+
+/* .member-ship {
+    margin-bottom: 64px;
+    padding: 0 148px;
+}
+
+.member-ship h2 {
+    font-size: 24px;
+    font-weight: 600;
+} */
+
+.member-ship>div {
+    width: 1053px;
+    height: 400px;
+    margin-top: 12px;
+    display: flex;
+    border-radius: 16px;
+    background: linear-gradient(97deg, #45172B 1.27%, #120C1F 75.23%);
+}
+
+.member-ship>div .text {
+    width: 50%;
+    padding: 136px 16px 120px 48px;
+}
+
+.member-ship>div .text h3 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Segoe UI Bold";
+}
+
+.member-ship>div .text p {
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.member-ship>div .img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    /* background: red; */
+    overflow: hidden;
+}
+
+.member-ship>div .img .top {
+    width: 724px;
+    height: 384px;
+    -webkit-text-size-adjust: 100%;
+    background: radial-gradient(94.35% 90.74% at 100% 100%,
+            rgba(229, 9, 20, 0.50) 0%,
+            rgba(23, 43, 71, 0.00) 100%),
+        url('./Images/games-lg.webp');
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    background-size: 100%;
+    position: absolute;
+    top: 10px;
+    right: -232px;
+    scale: 1.05;
+}
+
+
+/** ------------------ Cards ------------------ **/
+.card-container {
+    width: 1053px;
+    height: 289px;
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.card-container .card {
+    width: 251px;
+    height: 289px;
+    padding: 32px 16px 128px 16px;
+    border-radius: 16px;
+    position: relative;
+    background: linear-gradient(149deg, rgb(25, 34, 71) 0%, rgb(33, 14, 23) 96.86%);
+}
+
+.card-container .card h3 {
+    font-size: 32px;
+    font-weight: 900;
+    font-family: "Segoe UI Bold";
+}
+
+.card-container .card .img {
+    width: 72px;
+    height: 76px;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+
+
+/** ------------------ FAQ ------------------ **/
+
+ul.questions {
+    /* height: 550px; */
+    width: 80%;
+    max-width: 1034px;
+    margin-top: 16px;
+    list-style: none;
+    display: block;
+}
+
+ul.questions li {
+    /* height: fit-content; */
+    height: 85px;
+    width: 840px;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #2d2d2d;
+    position: relative;
+    transition: 0.3s all cubic-bezier(0.9, 0, 0.51, 1);
+}
+
+ul.questions li h3 {
+    height: 85px;
+    width: 840px;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.25s all cubic-bezier(0.9, 0, 0.51, 1);
+
+    &:hover {
+        background-color: #414141;
+    }
+}
+
+ul.questions li h3 img {
+    transition: 0.2s all cubic-bezier(0.9, 0, 0.51, 1);
+}
+
+ul.questions li div {
+    height: auto;
+    padding: 24px;
+    border-top: 1px solid #000000;
+    transform: translateY(-110%);
+    opacity: 0;
+    position: relative;
+    z-index: -999;
+    transition: 0.2s all cubic-bezier(0.9, 0, 0.51, 1);
+}
+
+
+/** ------------------ Form ------------------ **/
+.form { 
+    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.form h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form form input {
+    width: 735px;
+}
+
+
+/** ------------------ Footer ------------------ **/
+
+footer {
+    padding: 0 172px 96px 172px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.foot1 {
+    padding: 3px;
+    font-size: 16px;
+}
+
+.foot2 {
+    /* width: 835px; */
+    /* height: 177px; */
+    margin: 24px 0 14px 0;
+    /* padding: 4px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot2 ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+}
+
+.foot2 ul li {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.foot3 {
+    width: 132px;
+    height: 38px;
+    margin-top: 36px;
+    padding: 3px;
+}
+
+select {
+    height: 32px;
+    width: 126px;
+    font-size: 16px;
+    background-color: #0F0F0F;
+    color: white;
+    border-radius: 4px;
+    padding-left: 3px;
+}
+
+.foot4 {
+    margin-top: 36px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**      Footer      **/
+
+
+/**       Media Queries       **/
+
+/* @media screen and (max-width: 2560px) {
+    html { font-size: 189.5%; }
+}
+
+@media screen and (max-width: 1440px) {
+    html { font-size: 106.5%; }
+}
+
+@media screen and (max-width: 1366px) {
+    html { font-size: 100%; }
+    /* Added * 
+    .hero-img { height: 39rem; }
+}
+
+@media screen and (max-width: 1349px) {
+    html { font-size: 60.9%; }
+}
+
+@media screen and (max-width: 1024px) {
+    html { font-size: 75.5%; }
+}
+
+@media screen and (max-width: 912px) {
+    html { font-size: 67.5%; }
+}
+
+@media screen and (max-width: 820px) {
+    html { font-size: 60.8%; }
+}
+
+@media screen and (max-width: 768px) {
+    html { font-size: 56.8%; }
+}
+
+@media screen and (max-width: 425px) {
+    html { font-size: 31.5%; }
+}
+
+@media screen and (max-width: 375px) {
+    html { font-size: 27.7%; }
+}
+
+@media screen and (max-width: 320px) {
+    html { font-size: 27%; }
+}  */
